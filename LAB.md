@@ -67,7 +67,7 @@ When a client makes a GET request to /cowsay?text={message} the server should pa
 ```
 
 ###### GET /api/cowsay?text={message}
-When a client makes a POST request to /api/cowsay it should send JSON that includes `{"text": "<message>"}`. The server should respond with a JSON body `{"content": "<cowsay cow>"}`.
+When a client makes a GET request to /api/cowsay it should send JSON that includes `{"text": "<message>"}`. The server should respond with a JSON body `{"content": "<cowsay cow saying the sent text>"}`.
 
 A response for a valid Requests should have a status code of 200 and the JSON body
 ``` json
@@ -102,5 +102,4 @@ When a client makes a POST request to /api/cowsay it should send JSON that inclu
  * Design and implement a feature to change the cowfile on GET /cowsay, GET /api/cowsay, and POST /api/cowsay - **ex: dragon, sheep, etc**
    * You can find the different type of animals cowsay supports at https://github.com/piuccio/cowsay/tree/master/cows
 * This is a design task. You neeed decide how to change your code structure implement the feature.
-
 
