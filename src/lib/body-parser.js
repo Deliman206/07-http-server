@@ -26,8 +26,9 @@ module.exports = function bodyParser(req) {
       }
     });
 
+    // req.on('error', err => reject(err));
     req.on('error', (err) => {
-      return reject(err);
+      throw reject(err);
     });
     return undefined;
   });
