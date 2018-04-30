@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "eslint . && jest --coverage",
+    "test1": "jest --coverage",
     "lint": "eslint .",
     "start": "nodemon main.js"
   },

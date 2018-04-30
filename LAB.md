@@ -26,7 +26,7 @@ Configure the root of your repository with the following files and directories. 
 For this assignment you will be building a HTTP server.
 #### Server Module
 The server module is responsible for creating an http server defining all route behavior and exporting an interface for starting and stoping the server. It should export an object with `start` and `stop` methods. The start and stop methods should each return a promise that resolves on success and rejects on error.
-###### GET /
+###DONE### GET /
 When a client makes a GET request to / the server should send baack html with a project description and a anchor to /cowsay.
 ``` html
 <!DOCTYPE html>
@@ -49,7 +49,7 @@ When a client makes a GET request to / the server should send baack html with a 
 </html>
 ```
 
-###### GET /cowsay?text={message}
+###DONE### GET /cowsay?text={message}
 When a client makes a GET request to /cowsay?text={message} the server should parse the querystring for a text key. It should then send a rendered HTML page with a cowsay cow speaking the value of the text query. If their is no text query the cow message should be a random string taken from the `Faker` package.
 ``` html
 <!DOCTYPE html>
@@ -66,7 +66,7 @@ When a client makes a GET request to /cowsay?text={message} the server should pa
 </html>
 ```
 
-###### GET /api/cowsay?text={message}
+###DONE### GET /api/cowsay?text={message}
 When a client makes a GET request to /api/cowsay it should send JSON that includes `{"text": "<message>"}`. The server should respond with a JSON body `{"content": "<cowsay cow saying the sent text>"}`.
 
 A response for a valid Requests should have a status code of 200 and the JSON body
@@ -83,7 +83,7 @@ A response for a invalid Requests should have a status code of 400 and the JSON 
 }
 ```
 
-###### POST /api/cowsay
+###DONE### POST /api/cowsay
 When a client makes a POST request to /api/cowsay it should send JSON that includes `{"text": "<message>"}`. The server should respond with a JSON body `{"content": "<cowsay cow>"}`.
 
 | Request | Response Status Code | Response Type | Response Body |
